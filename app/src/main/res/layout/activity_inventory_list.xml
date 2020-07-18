@@ -1,0 +1,66 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    tools:context=".InventoryListActivity">
+
+    <ListView
+        android:id="@+id/inventoryListView"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"/>
+
+    <RelativeLayout
+        android:id="@+id/empty_view"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_centerInParent="true">
+
+        <ImageView
+            android:id="@+id/empty_inventory_image"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_centerHorizontal="true"
+            android:src="@drawable/market"/>
+        <!-- <div>Icons made by <a href="https://www.flaticon.com/free-icon/market_2890985" title="surang">surang</a> from <a href="https://www.flaticon.com/" title="Flaticon">www.flaticon.com</a></div>-->
+
+        <TextView
+            android:id="@+id/empty_title_text"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_below="@+id/empty_inventory_image"
+            android:layout_centerHorizontal="true"
+            android:fontFamily="sans-serif"
+            android:paddingTop="16dp"
+            android:text="@string/empty_view_title_text"
+            android:textAppearance="?android:textAppearanceLarge"/>
+
+        <TextView
+            android:id="@+id/empty_subtitle_text"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_below="@+id/empty_title_text"
+            android:layout_centerHorizontal="true"
+            android:fontFamily="sans-serif"
+            android:paddingTop="8dp"
+            android:text="@string/empty_view_subtitle_text"
+            android:textAppearance="?android:textAppearanceSmall"
+            android:textColor="#A2AAB0"/>
+    </RelativeLayout>
+
+    <com.google.android.material.floatingactionbutton.FloatingActionButton
+        android:id="@+id/fabInventory"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_alignParentRight="true"
+        android:layout_alignParentBottom="true"
+        android:layout_marginStart="15dp"
+        android:layout_marginTop="15dp"
+        android:layout_marginEnd="15dp"
+        android:layout_marginBottom="15dp"
+        android:clickable="true"
+        app:backgroundTint="@android:color/holo_red_light"
+        app:srcCompat="@android:drawable/ic_input_add" />
+
+</RelativeLayout>

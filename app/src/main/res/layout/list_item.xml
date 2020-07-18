@@ -1,0 +1,43 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:orientation="vertical"
+    android:padding="15dp"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent">
+
+    <TextView
+        android:id="@+id/productNameListView"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="@string/item"
+        android:layout_alignParentTop="@+id/productPriceListView"
+        android:textAppearance="?android:textAppearanceMedium" />
+
+    <TextView
+        android:id="@+id/productPriceListView"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginRight="152dp"
+        android:layout_marginTop="30dp"
+        android:text="@string/price_initials_text"
+        android:textAppearance="?android:textAppearanceMedium" />
+
+    <TextView
+        android:id="@+id/productQuantityListView"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_alignParentRight="true"
+        android:layout_marginRight="100dp"
+        android:layout_toLeftOf="@+id/saleImageButton"
+        android:textSize="30sp"
+        android:text="5" />
+
+    <ImageView
+        android:id="@+id/saleImageButton"
+        android:layout_alignParentRight="true"
+        android:layout_width="60dp"
+        android:layout_height="50dp"
+        android:background="@null"
+        android:tooltipText="@string/product_sale_tooltip"
+        android:src="@drawable/ic_baseline_shopping_cart" />
+</RelativeLayout>

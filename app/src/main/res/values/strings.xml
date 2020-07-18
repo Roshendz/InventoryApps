@@ -1,0 +1,25 @@
+<resources>
+    <string name="app_name">Inventory App</string>
+    <string name="button_start">START</string>
+    <string name="empty_view_title_text">No Items Found!</string>
+    <string name="empty_view_subtitle_text">Start by adding a new item.</string>
+    <string name="delete">DELETE</string>
+    <string name="cancel">CANCEL</string>
+    <string name="delete_dialog_msg">Delete this product?</string>
+    <string name="editor_delete_product_failed">Error with deleting product</string>
+    <string name="editor_delete_product_successful">Product deleted</string>
+    <string name="editor_activity_title_new_product">Add a new Product</string>
+    <string name="editor_activity_title_edit_product">Edit Product</string>
+    <string name="product_picture">Product Picture</string>
+    <string name="name">Name</string>
+    <string name="product_name">Product Name</string>
+    <string name="description">Description</string>
+    <string name="product_description">Product Description</string>
+    <string name="price">Price</string>
+    <string name="quantity">Quantity</string>
+    <string name="save">SAVE</string>
+    <string name="order">ORDER</string>
+    <string name="product_sale_tooltip">Clicked here to reduce the quantity of products by 1</string>
+    <string name="price_initials_text">Price 20.00</string>
+    <string name="item">Item</string>
+</resources>

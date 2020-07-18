@@ -1,0 +1,242 @@
+<?xml version="1.0" encoding="utf-8"?>
+<ScrollView xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:orientation="vertical"
+    android:padding="16dp"
+    tools:context=".InventoryDetailsActivity">
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:orientation="vertical">
+
+    <TextView
+        android:text="@string/product_picture"
+        android:textAppearance="?android:textAppearanceLarge"
+        style="@style/CategoryStyle" />
+    <LinearLayout
+        android:id="@+id/container_image"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="10dp"
+        android:layout_marginBottom="10dp"
+        android:orientation="horizontal">
+    <ImageView
+        android:id="@+id/addImageImageView"
+        android:layout_width="70dp"
+        android:layout_height="70dp"
+        android:layout_marginLeft="20dp"
+        android:layout_marginTop="10dp"
+        android:layout_marginBottom="10dp"
+        style="?android:attr/borderlessButtonStyle"
+        android:src="@drawable/ic_baseline_add_photo_alternate_24"
+        android:layout_gravity="center" />
+        <ImageView
+            android:id="@+id/retrievePhotoImageView"
+            android:layout_marginLeft="20dp"
+            android:layout_width="100dp"
+            android:layout_height="100dp"
+            android:visibility="invisible"
+            android:layout_gravity="center" />
+    </LinearLayout>
+    <TextView
+        android:id="@+id/nameTextView"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="10dp"
+        android:layout_marginBottom="10dp"
+        android:textAppearance="?android:textAppearanceMedium"
+        android:text="@string/name" />
+    <EditText
+        android:id="@+id/productNameEditText"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:ems="10"
+        android:inputType="textPersonName"
+        android:text="@string/product_name" />
+    <TextView
+        android:id="@+id/productDescTextView"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="10dp"
+        android:layout_marginBottom="10dp"
+        android:textAppearance="?android:textAppearanceMedium"
+        android:text="@string/description" />
+    <EditText
+        android:id="@+id/productDescEditText"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:ems="10"
+        android:inputType="textPersonName"
+        android:text="@string/product_description" />
+    <LinearLayout
+        android:id="@+id/container_contaects"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="10dp"
+        android:layout_marginBottom="10dp"
+        android:weightSum="10"
+        android:orientation="horizontal">
+        <TextView
+            android:id="@+id/contactsNumberTextView"
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            android:layout_weight="5"
+            android:paddingLeft="10dp"
+            android:textAppearance="?android:textAppearanceMedium"
+            android:text="Phone Number" />
+        <TextView
+            android:id="@+id/contactsEmailTextView"
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            android:layout_weight="5"
+            android:paddingLeft="10dp"
+            android:textAppearance="?android:textAppearanceMedium"
+            android:text="Email" />
+    </LinearLayout>
+    <LinearLayout
+        android:id="@+id/container_contacts"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="10dp"
+        android:layout_marginBottom="10dp"
+        android:weightSum="10"
+        android:orientation="horizontal">
+        <EditText
+            android:id="@+id/contactsNumberEditText"
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            android:layout_weight="5"
+            android:textAppearance="?android:textAppearanceMedium"
+            android:textAlignment="center"
+            android:inputType="number" />
+        <EditText
+            android:id="@+id/contactsEmailEditText"
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            android:layout_weight="5"
+            android:textAppearance="?android:textAppearanceMedium"
+            android:textAlignment="center"
+            android:inputType="textEmailAddress" />
+    </LinearLayout>
+    <LinearLayout
+        android:id="@+id/container_price"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="10dp"
+        android:layout_marginBottom="10dp"
+        android:weightSum="5"
+        android:orientation="horizontal">
+        <TextView
+            android:id="@+id/productPriceTextView"
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            android:layout_weight="1"
+            android:textAppearance="?android:textAppearanceMedium"
+            android:text="@string/price" />
+        <LinearLayout
+            android:layout_height="wrap_content"
+            android:layout_width="0dp"
+            android:layout_weight="2"
+            android:paddingLeft="4dp"
+            android:orientation="vertical">
+            <EditText
+                android:id="@+id/productPriceEditText"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:ems="10"
+                android:textAlignment="center"
+                android:inputType="numberDecimal" />
+        </LinearLayout>
+    </LinearLayout>
+    <LinearLayout
+        android:id="@+id/container_quantity"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_marginBottom="20dp"
+        android:orientation="horizontal">
+        <TextView
+            android:id="@+id/quantityTextView"
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            android:layout_weight="1"
+            android:layout_marginTop="10dp"
+            android:layout_marginBottom="10dp"
+            android:textAppearance="?android:textAppearanceMedium"
+            android:text="@string/quantity" />
+        <ImageButton
+            android:id="@+id/addQuantityImageButton"
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            android:layout_weight="1"
+            android:onClick="addQuantityToStock"
+            android:background="@null"
+            android:src="@drawable/plus" />
+        <!--    <div>Icons made by <a href="https://www.flaticon.com/authors/freepik" title="Freepik">Freepik</a> from <a href="https://www.flaticon.com/" title="Flaticon">www.flaticon.com</a></div>-->
+        <EditText
+            android:id="@+id/quantityEditText"
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            android:layout_weight="1"
+            android:layout_gravity="center_vertical"
+            android:textAppearance="?android:textAppearanceLarge"
+            android:layout_marginLeft="10dp"
+            android:layout_marginRight="10dp"
+            android:textAlignment="center"
+            android:ems="6"
+            android:inputType="number"
+            tools:ignore="RtlCompat" />
+        <ImageButton
+            android:id="@+id/reduceQuantityImageButton"
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            android:layout_weight="1"
+            android:onClick="reduceQuantityInStock"
+            android:background="@null"
+            android:src="@drawable/minus"/>
+        <!--    <div>Icons made by <a href="https://www.flaticon.com/authors/freepik" title="Freepik">Freepik</a> from <a href="https://www.flaticon.com/" title="Flaticon">www.flaticon.com</a></div>-->
+    </LinearLayout>
+    <LinearLayout
+        android:id="@+id/container_actionButton"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:orientation="horizontal">
+        <Button
+            android:id="@+id/productSaveButton"
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            android:layout_weight="1"
+            android:layout_margin="10dp"
+            android:textColor="#fff"
+            android:background="#FF902E"
+            android:textAppearance="?android:textAppearanceMedium"
+            android:onClick="saveDetailsInventory"
+            android:text="@string/save" />
+        <Button
+            android:id="@+id/productDeleteButton"
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            android:layout_weight="1"
+            android:layout_margin="10dp"
+            android:textColor="#fff"
+            android:background="#FF902E"
+            android:textAppearance="?android:textAppearanceMedium"
+            android:onClick="deleteDetailsInventory"
+            android:text="@string/delete" />
+        <Button
+            android:id="@+id/productOrderButton"
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            android:layout_weight="1"
+            android:layout_margin="10dp"
+            android:textColor="#fff"
+            android:background="#FF902E"
+            android:textAppearance="?android:textAppearanceMedium"
+            android:onClick="orderProductInventory"
+            android:text="@string/order" />
+    </LinearLayout>
+    </LinearLayout>
+</ScrollView>
